@@ -41,7 +41,7 @@
 <body>
 
     <div class="container">
-        <img id="display-image" src="page1.jpg" alt="Proposal Image">
+        <img id="display-image" src="1st.jpeg" alt="Proposal Image">
         
         <video id="display-video" class="hidden" autoplay loop muted playsinline>
             <source src="yay.mp4" type="video/mp4">
@@ -56,10 +56,11 @@
     </div>
 
     <script>
+        // Filenames updated to match your uploaded .jpeg files
         const content = [
-            { text: "You know you're my favorite person to talk to, right?", img: "page2.jpg" },
-            { text: "So... will you make me the happiest person and be my Valentine?", img: "page3.jpg" },
-            { text: "Since you said yes (finally!), are you ready for our surprise date?", img: "page4.jpg" }
+            { text: "You know you're my favorite person to talk to, right?", img: "2nd.jpeg" },
+            { text: "So... will you make me the happiest person and be my Valentine?", img: "3rd.jpeg" },
+            { text: "Since you said yes (finally!), are you ready for our surprise date?", img: "4th.jpeg" }
         ];
 
         let currentStep = 0;
@@ -71,19 +72,19 @@
 
         yesBtn.addEventListener('click', () => {
             if (currentStep < content.length) {
-                // Update text and image for next page
+                // Update text and image
                 questionEl.innerText = content[currentStep].text;
                 imageEl.src = content[currentStep].img;
                 
-                // Reset 'No' button position
+                // Reset No button to center for next question
                 noBtn.style.position = 'static';
                 currentStep++;
             } else {
-                // Final 'YAY' Page
+                // Final YAY Page
                 questionEl.innerHTML = "YAY! I can't wait to see you! 🎉❤️";
-                imageEl.classList.add('hidden'); // Hide the image
-                videoEl.classList.remove('hidden'); // Show the video
-                document.getElementById('button-group').classList.add('hidden'); // Hide buttons
+                imageEl.classList.add('hidden');
+                videoEl.classList.remove('hidden');
+                document.getElementById('button-group').classList.add('hidden');
             }
         });
 
