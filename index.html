@@ -41,7 +41,7 @@
 <body>
 
     <div class="container">
-        <img id="display-image" src="1st.jpeg" alt="Proposal Image">
+        <img id="display-image" src="1st.png" alt="Proposal Image">
         
         <video id="display-video" class="hidden" autoplay loop muted playsinline>
             <source src="yay.mp4" type="video/mp4">
@@ -58,9 +58,9 @@
     <script>
         // Filenames updated to match your uploaded .jpeg files
         const content = [
-            { text: "You know you're my favorite person to talk to, right?", img: "2nd.jpeg" },
-            { text: "So... will you make me the happiest person , Durva Mam will you be my Valentine?", img: "3rd.jpeg" },
-            { text: "Since you said yes (finally!), are you ready for our surprise date?", img: "4th.jpeg" }
+            { text: "You know you're my favorite person to talk to, right?", img: "2nd.png" },
+            { text: "So... will you make me the happiest person , Durva Mam will you be my Valentine?", img: "3rd.png" },
+            { text: "Since you said yes (finally!), are you ready for our date?", img: "4th.png" }
         ];
 
         let currentStep = 0;
@@ -81,7 +81,7 @@
                 currentStep++;
             } else {
                 // Final YAY Page
-                questionEl.innerHTML = "YAY! I can't wait to see you! 🎉❤️";
+                questionEl.innerHTML = "YAY! I can't wait to see you! ❤️";
                 imageEl.classList.add('hidden');
                 videoEl.classList.remove('hidden');
                 document.getElementById('button-group').classList.add('hidden');
@@ -99,4 +99,5 @@
     </script>
 </body>
 </html>
+
 
